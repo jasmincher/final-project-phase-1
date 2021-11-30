@@ -9,11 +9,11 @@ Recipe desk is a responsive website that allows the user to find popular recipes
 App concept on [figma](https://www.figma.com/file/5BN6cHtH2w2gaxURvWE3z8/Phase-1-Project?node-id=0%3A1)
 
 
- | Mobile                                                     |    Tablet                                               |    Desktop                                                    |
- | -----------------------------------------------------      | --------------------------------------------------      | --------------------------------------------------------------|
- | ![Mobile Landing page](images/homepage-mobile.png) | ![Tablet Landing Page](images/homepage-tablet.png) |![Desktop Landing Page](images/homepage-desktop.png)        |                               
- | ![Mobile Landing page](images/trending-mobile.png) | ![Tablet Landing page](trending-mobile.png)|![Desktop Landing page](images/trending-desktop.png)     |                                                                                 
- | ![Mobile Landing page](images/search-mobile.png) | ![Tablet Landing page](images/search-tablet.png) | ![Desktop Landing page](images/search-desktop.png) |
+ | Mobile                                             | Desktop                                              | 
+ |----------------------------------------------------|------------------------------------------------------|
+ |![Mobile Landing page](images/homepage-mobile.png)  |![Desktop Landing Page](images/homepage-desktop.png)  |  
+ |![Mobile Trending page](images/trending-mobile.png) |![Desktop Trending page](images/trending-desktop.png) |
+ |![Mobile Search page](images/search-mobile.png)     | ![Desktop Search page](images/search-desktop.png)    |
 
  
 ## API
