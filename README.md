@@ -41,6 +41,7 @@ App concept on [figma](https://www.figma.com/file/5BN6cHtH2w2gaxURvWE3z8/Phase-1
 
 
 ## Collaborators
-- Jasmin
-- Braun
-- Shoful 
+
+- [Jasmin Hernandez](https://github.com/jasmincher)
+- [Shoful Alom](https://github.com/Shoful)
+- Braun Payne
