@@ -12,7 +12,7 @@ App concept on [figma](https://www.figma.com/file/5BN6cHtH2w2gaxURvWE3z8/Phase-1
  | Mobile                                                     |    Tablet                                               |    Desktop                                                    |
  | -----------------------------------------------------      | --------------------------------------------------      | --------------------------------------------------------------|
  | ![Mobile Landing page](images/homepage-mobile.png) | ![Tablet Landing Page](images/homepage-tablet.png) |![Desktop Landing Page](images/homepage-desktop.png)        |                               
- | ![Mobile Landing page](images/trending-mobile.png) | ![Tablet Landing page](trending-mobile.png)|![Desktop Landing page](images/desktop-trending.png)     |                                                                                 
+ | ![Mobile Landing page](images/trending-mobile.png) | ![Tablet Landing page](trending-mobile.png)|![Desktop Landing page](images/trending-desktop.png)     |                                                                                 
  | ![Mobile Landing page](images/search-mobile.png) | ![Tablet Landing page](images/search-tablet.png) | ![Desktop Landing page](images/search-desktop.png) |
 
  
