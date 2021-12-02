@@ -14,6 +14,11 @@
 }
 
 
+.close-btn::after{
+  content: "\e5cd";
+  font-family: "Material Icons";
+}
+
 
 #title-and-image h3{
     text-align: center;
@@ -31,7 +36,7 @@
 
 .nutrition-label-btn{
     height: 40px;
-    width: 40%;
+    /* width: 40%; */
     margin: 40px auto;
 }
 
