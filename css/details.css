@@ -1,0 +1,93 @@
+.mdl-layout__header {
+  /* background: white; */
+}
+
+.mdl-layout__header > * {
+  /* color: black; */
+}
+
+#details-page-container {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+
+#title-and-image h3{
+    text-align: center;
+}
+
+#title-and-image img{
+    margin: auto;
+    display: block;
+    width: 330px;
+}
+
+
+.nutrition-label-btn{
+    height: 40px;
+    width: 40%;
+    margin: 40px auto;
+}
+
+
+#spoonacular-nutrition-label{
+width: 200px !important;
+/* height: 200px; */
+}
+
+@media only screen and (min-width: 576px) {
+    #title-and-image img{
+        width: 550px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #title-and-image img{
+        width: 580px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+  /* .mdl-layout__header{
+        background: pink;
+    } */
+  #details-page-container {
+    grid-template-areas:
+      "title-and-image desc desc"
+      "title-and-image ingr ingr"
+      "btn instr instr";
+    grid-template-columns: 3fr 4fr;
+    gap: 0;
+  }
+
+  #title-and-image {
+    grid-area: title-and-image;
+    margin: 30px;
+    margin-bottom: 0;
+  }
+
+  #desc-container {
+    grid-area: desc;
+    margin: 0 30px;
+  }
+
+  #ingr-container {
+    grid-area: ingr;
+    margin: 0 30px;
+  }
+
+  #instr-container {
+    grid-area: instr;
+    margin: 0 30px;
+  }
+
+  .nutrition-label-btn {
+    grid-area: btn;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+}
