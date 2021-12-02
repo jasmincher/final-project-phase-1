@@ -7,6 +7,8 @@ const api_key = process.env.API_KEY;
 const base_url = process.env.BASE_URL;
 
 const showNutritionLabel = () => {
+
+  clearLabel();
   axios
     .get(`${base_url}/${testVariable}/nutritionLabel.png?apiKey=${api_key}`, { 
       responseType: "blob", //we have to do this since we get characters returned instead of a url
@@ -17,6 +19,16 @@ const showNutritionLabel = () => {
     })
     .catch((error) => console.error(error));
 };
+
+//this will avoid the nutrition label from being duplicated
+const clearLabel = () => {
+  const label = document.getElementById("nutrition-label-info");
+
+  while (label.firstChild) {
+    label.firstChild.remove();
+  }
+};
+
 
 const nutritionLabel = (src) => {
   const cont = document.getElementById("nutrition-label-info");
