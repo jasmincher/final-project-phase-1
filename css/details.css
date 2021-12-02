@@ -1,11 +1,4 @@
-.mdl-layout__header {
-  /* background: white; */
-}
-
-.mdl-layout__header > * {
-  /* color: black; */
-}
-
+/*layout for details page*/
 #details-page-container {
   display: grid;
   grid-template-rows: auto auto auto auto auto;
@@ -13,61 +6,63 @@
   padding: 20px;
 }
 
-
-.close-btn::after{
+/*close icon for close button on modal*/
+.close-btn::after {
   content: "\e5cd";
   font-family: "Material Icons";
 }
 
-
-#title-and-image h3{
-    text-align: center;
+/*heading for recipe name*/
+#title-and-image h3 {
+  text-align: center;
 }
 
-#title-and-image img{
-    margin: auto;
-    display: block;
-    width: 330px;
-    height: 330px;
-    object-fit:cover;
-
-}
-
-
-.nutrition-label-btn{
-    height: 40px;
-    /* width: 40%; */
-    margin: 40px auto;
+/*recipe image*/
+#title-and-image img {
+  margin: auto;
+  display: block;
+  width: 330px;
+  height: 330px;
+  object-fit: cover;
 }
 
 
-#spoonacular-nutrition-label{
-width: 200px !important;
-/* height: 200px; */
+/*nutrition label button*/
+.nutrition-label-btn {
+  height: 40px;
+  margin: 40px auto;
 }
 
+
+/*nutrition label*/
+#spoonacular-nutrition-label {
+  width: 200px !important;
+}
+
+
+
+
+/************** Responsive Styles *************/
 @media only screen and (min-width: 576px) {
-    #title-and-image img{
-        width: 350px;
-        height: 350px;
-        object-fit: cover;
-
-    }
+  /*recipe image*/
+  #title-and-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    #title-and-image img{
-        width: 400px;
-        height: 400px;
-        object-fit:cover;
-
-    }
+  /*recipe image*/
+  #title-and-image img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
-  /* .mdl-layout__header{
-        background: pink;
-    } */
+  /*details page layout*/
   #details-page-container {
     grid-template-areas:
       "title-and-image desc desc"
@@ -77,27 +72,32 @@ width: 200px !important;
     gap: 0;
   }
 
+  /*recipe title and recipe image container*/
   #title-and-image {
     grid-area: title-and-image;
     margin: 30px;
     margin-bottom: 0;
   }
 
+  /*recipe description container*/
   #desc-container {
     grid-area: desc;
     margin: 0 30px;
   }
 
+  /*ingredients container*/
   #ingr-container {
     grid-area: ingr;
     margin: 0 30px;
   }
 
+  /*instructions container*/
   #instr-container {
     grid-area: instr;
     margin: 0 30px;
   }
 
+  /*nutrion label button*/
   .nutrition-label-btn {
     grid-area: btn;
   }
