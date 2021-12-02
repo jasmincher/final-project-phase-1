@@ -1,5 +1,6 @@
 import axios from "axios";
 import dotenv from "dotenv";
+import {testVariable} from '../js/test'
 dotenv.config();
 
 const api_key = process.env.API_KEY;
@@ -7,11 +8,8 @@ const base_url = process.env.BASE_URL;
 
 const getDetails = () => {
   axios
-    .get(`${base_url}/680975/information?apiKey=${api_key}`)
+    .get(`${base_url}/${testVariable}/information?apiKey=${api_key}`)
     .then((response) => {
-      const data = response;
-      console.log(data);
-      //  export let data = createTitle(response.data.title)
       createDetailedView(response.data);
     })
     .catch((error) => console.error(error));
@@ -19,18 +17,12 @@ const getDetails = () => {
 
 getDetails();
 
-// const createTitle = (recipeName) => {
-//     let container = document.getElementById("details-page-container");
-//     const h1 = document.createElement('h1');
-//     h1.textContent = `Similar recipes to "${recipeName}"`;
-//     container.appendChild(h1);
-// }
-
-const recipeDetails = (title, image, summary, instructions) => {
+const recipeDetails = (title, image, summary,ingredients, instructions) => {
   const div = document.getElementById("title-and-image");
   const descContainer = document.getElementById("desc-container");
   const instrContainer = document.getElementById("instr-container");
 
+  
   const recipeName = document.createElement("h3");
   recipeName.textContent = title;
 
@@ -39,16 +31,15 @@ const recipeDetails = (title, image, summary, instructions) => {
 
   const desc = document.createElement("p");
   desc.innerHTML = summary;
-
+  
   const instr = document.createElement("p");
   instr.textContent = instructions;
+
 
   div.appendChild(recipeName);
   div.appendChild(recipeImg);
   descContainer.appendChild(desc);
   instrContainer.appendChild(instr);
-
-  return div;
 };
 
 const createDetailedView = (recipes) => {
