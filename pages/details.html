@@ -63,14 +63,47 @@
             <h4>Instructions</h4>
           </div>
 
-          <a href="../pages/similar.html">
-            <button class="similar-recipes-btn">
-              Look for similar recipes
+            <button class="nutrition-label-btn show-modal" type="button" id="nutrition-label-btn" >
+              View Nutrition Label
             </button>
-          </a>
+            <!-- <button type="button" class="mdl-button show-modal">Show Modal</button> -->
+
+
+            <dialog class="mdl-dialog">
+
+
+              <div class="mdl-dialog__actions">
+                <button class="mdl-button close">X</button>
+              </div>
+              <div class="mdl-dialog__content" id="nutrition-label-info">
+               
+
+
+              </div>
+          
+            </dialog>
+
+
+ 
         </div>
       </main>
     </div>
-    <!-- <script src="../js/recipeDetails.js " type="module"></script> -->
+
+
+    <script>
+      var dialog = document.querySelector('dialog');
+      var showModalButton = document.querySelector('.show-modal');
+      if (! dialog.showModal) {
+        dialogPolyfill.registerDialog(dialog);
+      }
+      showModalButton.addEventListener('click', function() {
+        dialog.showModal();
+      });
+      dialog.querySelector('.close').addEventListener('click', function() {
+        dialog.close();
+      });
+    </script>
+    <script src="../js/recipeDetails.js " type="module"></script>
+    <script src="../js/nutritionLabel.js" type="module"></script>
   </body>
 </html>
