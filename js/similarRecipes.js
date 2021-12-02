@@ -1,5 +1,7 @@
 import axios from "axios";
 import dotenv from "dotenv";
+import {testVariable} from '../js/test'
+
 dotenv.config();
 
 const api_key = process.env.API_KEY;
@@ -9,8 +11,7 @@ const getSimilar = () => {
   axios
     .get(`${base_url}/715538/similar?apiKey=${api_key}`)
     .then((response) => {
-      const data = response;
-      console.log(data);
+      createTitle(testVariable);
       createAllCards(response.data);
     })
     .catch((error) => console.error(error));
@@ -19,10 +20,14 @@ const getSimilar = () => {
 getSimilar();
 
 const createTitle = (recipeName) => {
+  let div = document.getElementById("similar-recipes-container");
+
     const h1 = document.createElement('h1');
     h1.textContent = `Similar recipes to "${recipeName}"`;
-    return h1;
-}
+    // return h1;
+  div.appendChild(h1);
+
+  }
 
 const createCard = (name,serving,time) => {
     const div = document.createElement('div');
