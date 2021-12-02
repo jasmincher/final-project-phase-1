@@ -1,3 +1,20 @@
+/*navbar container*/
+.mdl-layout__header{
+  background: white;
+  color: black;
+  box-shadow: none;
+}
+
+/*navbar navigation links*/
+.mdl-layout__header-row a.mdl-navigation__link{
+  color: black;
+}
+
+/*navbar hamburger icon*/
+.mdl-layout__header .mdl-layout__drawer-button{
+  color: black;
+}
+
 /*layout for details page*/
 #details-page-container {
   display: grid;
@@ -33,12 +50,20 @@
   margin: 40px auto;
 }
 
-
-/*nutrition label*/
-#spoonacular-nutrition-label {
-  width: 200px !important;
+/*modal*/
+.mdl-dialog{
+  width: fit-content;
 }
 
+/*nutrition label*/
+#nutrition-label-info img {
+ width: 230px;
+ margin: auto;
+}
+
+.mdl-dialog__content html{
+  font-size: 1px;
+}
 
 
 
