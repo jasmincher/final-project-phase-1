@@ -28,6 +28,7 @@ const recipeDetails = (title, image, summary,ingredients, instructions) => {
 
   const recipeImg = document.createElement("img");
   recipeImg.setAttribute("src", image);
+  recipeImg.setAttribute("class","someImg");
 
   const desc = document.createElement("p");
   desc.innerHTML = summary;
