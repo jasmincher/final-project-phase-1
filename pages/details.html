@@ -4,33 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Detailed View</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
+    />
+    <link rel="stylesheet" href="../css/details.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   </head>
+
+
   <body>
-    <div id="details-page-container">
-    <div id="title-and-image">
-        <p>title</p>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-layout--no-desktop-drawer-button">
+        <div class="mdl-layout-icon"></div>
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout__title">Food Desk</span>
+          <div class="mdl-layout-spacer"></div>
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="#">Home</a>
+            <a class="mdl-navigation__link" href="#">Trending</a>
+            <a class="mdl-navigation__link" href="#">Search</a>
+            <a class="mdl-navigation__link" href="#">About</a>
+            <a class="mdl-navigation__link" href="#">Contact</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout__title">Food Desk</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="#">Home</a>
+          <a class="mdl-navigation__link" href="#">Trending</a>
+          <a class="mdl-navigation__link" href="#">Search</a>
+          <a class="mdl-navigation__link" href="#">About</a>
+          <a class="mdl-navigation__link" href="#">Contact</a>
+        </nav>
+      </div>
+
+      <main class="mdl-layout__content">
+        <div id="details-page-container">
+          <div id="title-and-image"></div>
+
+          <div id="desc-container">
+            <h4>Description</h4>
+          </div>
+
+          <div id="ingr-container">
+            <h4>Ingredients</h4>
+            <ul id="ingr-list"></ul>
+          </div>
+
+          <div id="instr-container">
+            <h4>Instructions</h4>
+          </div>
+
+          <a href="../pages/similar.html">
+            <button class="similar-recipes-btn">
+              Look for similar recipes
+            </button>
+          </a>
+        </div>
+      </main>
     </div>
-
-      <div id="desc-container">
-        <h4>Description</h4>
-      </div>
-
-      <div id="ingr-container">
-        <h4>Ingredients</h4>
-        <ul id="ingr-list"></ul>
-      </div>
-
-      <div id="instr-container">
-        <h4>Instructions</h4>
-      </div>
-
-
-     <a href="../pages/similar.html">
-         <button class="similar-recipes-btn">Look for similar recipes</button>
-     </a>
-    </div>
-
-    <script type="module" src="../js/recipeDetails.js"></script>
+    <!-- <script src="../js/recipeDetails.js " type="module"></script> -->
   </body>
 </html>
