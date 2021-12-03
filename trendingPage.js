@@ -19,8 +19,8 @@ const getDetails = () => {
 
   getDetails();
 
-  // const createTitle = (trendingRec) => {
-//     let container = document.getElementById("details-page-container");
+   const createTitle = (trendingRec) => {
+    let div = document.getElementById("trending-recipes-container");
 //     const h1 = document.createElement('h1');
 //
 // }
