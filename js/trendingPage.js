@@ -21,6 +21,7 @@ const getTrending = () => {
 const createCard = (title, desc, img) => {
   let container = document.getElementById("trending-recipes-container")
   let div = document.createElement("div")
+  div.setAttribute("class", "trending-recipe-card")
 
   let recipeName = document.createElement("h6")
   recipeName.innerHTML = title;
