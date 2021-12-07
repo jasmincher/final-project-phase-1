@@ -11,7 +11,7 @@ const showNutritionLabel = () => {
   clearLabel();
   axios
     .get(`${base_url}/${testVariable}/nutritionLabel.png?apiKey=${api_key}`, { 
-      responseType: "blob", //we have to do this since we get characters returned instead of a url
+      responseType: "blob", //we have to add headers of responseType since we get characters returned instead of a url
     })
     .then((response) => {
       let imgURL = URL.createObjectURL(response.data); //here we create our url for our blob-file
