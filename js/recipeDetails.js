@@ -1,6 +1,5 @@
 import axios from "axios";
 import dotenv from "dotenv";
-import {testVariable} from '../js/test'
 dotenv.config();
 
 const api_key = process.env.API_KEY;
@@ -8,7 +7,7 @@ const base_url = process.env.BASE_URL;
 
 const getDetails = () => {
   axios
-    .get(`${base_url}/${testVariable}/information?apiKey=${api_key}`)
+    .get(`${base_url}/715538/information?apiKey=${api_key}`)
     .then((response) => {
       createDetailedView(response.data);
     })

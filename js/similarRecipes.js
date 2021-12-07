@@ -1,6 +1,5 @@
 import axios from "axios";
 import dotenv from "dotenv";
-import {testVariable} from '../js/test'
 
 dotenv.config();
 
