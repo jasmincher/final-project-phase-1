@@ -1,0 +1,21 @@
+#home-page-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    align-items: center;
+    height: 100vh;
+    background: url(../images/recipe-desk-bg.png) no-repeat;
+    background-position: center;
+    gap: 30px;
+}
+
+.home-btn{
+    background: white;
+    width: 250px;
+    /* padding: 5px */
+}
+
+.home-btn:hover{
+    background: rgb(215, 215, 215);
+}
