@@ -10,38 +10,47 @@ const getTrending = () => {
     .get(`${base_url}/random?number=10&apiKey=${api_key}`)
     .then((response) => {
       const data = response.data.recipes;
-      appendCards(data)
+      appendCards(data);
     })
     .catch((error) => console.error(error));
-  };
+};
 
-  getTrending();
+getTrending();
 
 // IMAGE TAG, TITLE & DESCRIPTION
-const createCard = (title, desc, img) => {
-  let container = document.getElementById("trending-recipes-container")
-  let div = document.createElement("div")
-  div.setAttribute("class", "trending-recipe-card")
+const createCard = (title, desc, img, id) => {
+  let container = document.getElementById("trending-recipes-container");
 
-  let recipeName = document.createElement("h6")
+  let link = document.createElement("a");
+  let url = new URL("http://localhost:1234/pages/details.html");
+  url.searchParams.append("id", id);
+  link.setAttribute("href", url);
+
+  let div = document.createElement("div");
+  div.setAttribute("class", "trending-recipe-card");
+
+  let recipeName = document.createElement("h6");
   recipeName.innerHTML = title;
 
-  let description = document.createElement("p")
+  let description = document.createElement("p");
   description.innerHTML = desc;
 
-  let image = document.createElement("img")
-  image.setAttribute("src", img)
+  let image = document.createElement("img");
+  image.setAttribute("src", img);
 
-  div.appendChild(recipeName)
-  div.appendChild(description)
-  div.appendChild(image)
-  return div
-}
+  link.appendChild(div);
+  div.appendChild(recipeName);
+  div.appendChild(description);
+  div.appendChild(image);
+  return link;
+};
 
+//this will create a card for the # of elements there are in the array
+//each card will have its corresponding title, summary, image and id
 const appendCards = (recipes) => {
-  let container = document.getElementById("trending-recipes-container")
-    recipes.forEach((recipe) => {
-      let card = createCard(recipe.title, recipe.summary, recipe.image)
-      container.appendChild(card)
-    })
-}
+  let container = document.getElementById("trending-recipes-container");
+  recipes.forEach((recipe) => {
+    let card = createCard(recipe.title, recipe.summary, recipe.image, recipe.id);
+    container.appendChild(card);
+  });
+};
