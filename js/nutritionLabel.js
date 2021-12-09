@@ -5,11 +5,13 @@ dotenv.config();
 const api_key = process.env.API_KEY;
 const base_url = process.env.BASE_URL;
 
+let id = window.location.href.slice(-6)
+
 const showNutritionLabel = () => {
 
   clearLabel();
   axios
-    .get(`${base_url}/715538/nutritionLabel.png?apiKey=${api_key}`, { 
+    .get(`${base_url}/${id}/nutritionLabel.png?apiKey=${api_key}`, { 
       responseType: "blob", //we have to add headers of responseType since we get characters returned instead of a url
     })
     .then((response) => {
