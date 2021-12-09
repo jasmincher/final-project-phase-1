@@ -5,40 +5,47 @@ dotenv.config();
 const api_key = process.env.API_KEY;
 const base_url = process.env.BASE_URL;
 
-const getDetails = () => {
-  axios
-    .get(`${base_url}/715538/information?apiKey=${api_key}`)
+let id = window.location.href.slice(-6)
+
+const getDetails = async () => {
+  await axios
+    .get(`${base_url}/${id}/information?apiKey=${api_key}`)
     .then((response) => {
       createDetailedView(response.data);
+
     })
     .catch((error) => console.error(error));
 };
+getDetails()
 
-getDetails();
 
 const recipeDetails = (title, image, summary,ingredients, instructions) => {
   const div = document.getElementById("title-and-image");
+  const container = document.getElementById("details-page-container")
   const descContainer = document.getElementById("desc-container");
   const instrContainer = document.getElementById("instr-container");
 
-  
   const recipeName = document.createElement("h3");
   recipeName.textContent = title;
-
+  
   const recipeImg = document.createElement("img");
   recipeImg.setAttribute("src", image);
+
 
   const desc = document.createElement("p");
   desc.innerHTML = summary;
   
   const instr = document.createElement("p");
-  instr.textContent = instructions;
+  instr.innerHTML = instructions;
 
 
   div.appendChild(recipeName);
   div.appendChild(recipeImg);
   descContainer.appendChild(desc);
   instrContainer.appendChild(instr);
+
+  return container;
+
 };
 
 const createDetailedView = (recipes) => {
