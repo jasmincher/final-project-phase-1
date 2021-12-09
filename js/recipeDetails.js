@@ -54,9 +54,10 @@ const createDetailedView = (recipes) => {
 
   let items = recipes.extendedIngredients.forEach((ingredient) => {
     let li = document.createElement("li");
-    li.textContent = ingredient.name;
+    li.textContent = ingredient.originalString;
     ingrList.appendChild(li);
   });
+
 
   let card = recipeDetails(
     recipes.title,
