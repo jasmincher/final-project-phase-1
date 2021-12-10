@@ -55,8 +55,8 @@ const createCard = (title, img, id) => {
   image.setAttribute("src", img);
 
   link.appendChild(div);
-  div.appendChild(recipeName);
   div.appendChild(image);
+  div.appendChild(recipeName);
   return link;
 };
 
