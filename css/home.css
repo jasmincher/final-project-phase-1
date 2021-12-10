@@ -1,3 +1,6 @@
+body{
+    background: initial;
+}
 #home-page-container{
     display: flex;
     flex-direction: column;
@@ -5,8 +8,9 @@
     width: 100vw;
     align-items: center;
     height: 100vh;
-    background: url(../images/recipe-desk-bg.png) no-repeat;
+    background: url(../images/recipe-desk-bg.jpeg) no-repeat;
     background-position: center;
+    background-size: cover;
     gap: 30px;
 }
 
