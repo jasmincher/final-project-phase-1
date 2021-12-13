@@ -1,0 +1,117 @@
+
+/*layout for details page*/
+#details-page-container {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+/*close icon for close button on modal*/
+.close-btn::after {
+  content: "\e5cd";
+  font-family: "Material Icons";
+}
+
+/*heading for recipe name*/
+#title-and-image h3 {
+  font-family: var(--body-font);
+  text-align: center;
+}
+
+/*recipe image*/
+#title-and-image img {
+  margin: auto;
+  display: block;
+  width: 330px;
+  height: 330px; 
+  object-fit: cover;
+}
+
+
+/*nutrition label button*/
+.nutrition-label-btn {
+  height: 40px;
+  margin: 40px auto;
+  font-family: var(--body-font);
+
+}
+
+/*modal*/
+.mdl-dialog{
+  width: fit-content;
+}
+
+/*nutrition label*/
+#nutrition-label-info img {
+ width: 230px;
+ margin: auto;
+}
+
+h4{
+  font-family: var(--body-font) !important;
+}
+
+/************** Responsive Styles *************/
+@media only screen and (min-width: 576px) {
+  /*recipe image*/
+  #title-and-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /*recipe image*/
+  #title-and-image img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  /*details page layout*/
+  #details-page-container {
+    grid-template-areas:
+      "title-and-image desc desc"
+      "title-and-image ingr ingr"
+      "btn instr instr";
+    grid-template-columns: 3fr 4fr;
+    gap: 0;
+  }
+
+  /*recipe title and recipe image container*/
+  #title-and-image {
+    grid-area: title-and-image;
+    margin: 30px;
+    margin-bottom: 0;
+  }
+
+  /*recipe description container*/
+  #desc-container {
+    grid-area: desc;
+    margin: 0 30px;
+  }
+
+  /*ingredients container*/
+  #ingr-container {
+    grid-area: ingr;
+    margin: 0 30px;
+  }
+
+  /*instructions container*/
+  #instr-container {
+    grid-area: instr;
+    margin: 0 30px;
+  }
+
+  /*nutrion label button*/
+  .nutrition-label-btn {
+    grid-area: btn;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+}

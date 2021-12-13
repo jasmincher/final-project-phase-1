@@ -1,0 +1,32 @@
+body{
+    background: initial;
+}
+#home-page-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    align-items: center;
+    height: 100vh;
+    background: url(../images/recipe-desk-bg.jpeg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    gap: 30px;
+}
+
+#home-page-container h1{
+    font-family: var(--logo-font);
+    font-size: 70px;
+}
+.home-btn{
+    background: white;
+    width: 250px;
+    border-radius: 25px;
+    padding: 5px;
+    height: auto;
+    font-family: var(--body-font);
+}
+
+.home-btn:hover{
+    background: rgb(215, 215, 215);
+}
