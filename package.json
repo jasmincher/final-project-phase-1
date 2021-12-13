@@ -4,8 +4,9 @@
     "dotenv": "^10.0.0",
     "parcel": "^2.0.1"
   },
+
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html pages/details.html"
   }
 }
