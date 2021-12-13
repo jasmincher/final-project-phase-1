@@ -14,10 +14,17 @@ body{
     gap: 30px;
 }
 
+#home-page-container h1{
+    font-family: var(--logo-font);
+    font-size: 70px;
+}
 .home-btn{
     background: white;
     width: 250px;
-    /* padding: 5px */
+    border-radius: 25px;
+    padding: 5px;
+    height: auto;
+    font-family: var(--body-font);
 }
 
 .home-btn:hover{
