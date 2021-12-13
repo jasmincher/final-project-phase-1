@@ -52,9 +52,7 @@ document.getElementById("search-input").addEventListener("keydown", (e) => {
 // IMAGE TAG & TITLE
 const createCard = (title, img, id) => {
   let link = document.createElement("a");
-  let url = new URL(window.location.href);
-  url.searchParams.append("id", id);
-  link.setAttribute("href", url);
+  link.setAttribute("href", "/pages/details.html" + `?id=${id}`);
   link.setAttribute("class","search-card");
 
   let div = document.createElement("div");

@@ -22,9 +22,8 @@ const createCard = (title, desc, img, id) => {
   let container = document.getElementById("trending-recipes-container");
 
   let link = document.createElement("a");
-  let url = new URL(window.location.href);
-  url.searchParams.append("id", id);
-  link.setAttribute("href", url);
+
+  link.setAttribute("href", "/pages/details.html" + `?id=${id}`);
 
   let div = document.createElement("div");
   div.setAttribute("class", "trending-recipe-card");
@@ -50,7 +49,12 @@ const createCard = (title, desc, img, id) => {
 const appendCards = (recipes) => {
   let container = document.getElementById("trending-recipes-container");
   recipes.forEach((recipe) => {
-    let card = createCard(recipe.title, recipe.summary, recipe.image, recipe.id);
+    let card = createCard(
+      recipe.title,
+      recipe.summary,
+      recipe.image,
+      recipe.id
+    );
     container.appendChild(card);
   });
 };
