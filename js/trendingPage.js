@@ -23,7 +23,7 @@ const createCard = (title, desc, img, id) => {
 
   let link = document.createElement("a");
 
-  link.setAttribute("href", "/pages/details.html" + `?id=${id}`);
+  link.setAttribute("href", "details.html" + `?id=${id}`);
 
   let div = document.createElement("div");
   div.setAttribute("class", "trending-recipe-card");
