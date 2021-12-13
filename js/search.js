@@ -35,9 +35,19 @@ document.getElementById("search-btn").addEventListener("click", () => {
   while (myNode.firstChild) {
     myNode.removeChild(myNode.lastChild);
   }
-  console.log(value);
   getSearch(value);
 });
+
+document.getElementById("search-input").addEventListener("keydown", (e) => {
+  let value = document.getElementById("search-input").value;
+  let myNode = document.getElementById("recipes-list");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.lastChild);
+  }
+
+  if(e.key === "Enter") getSearch(value);
+});
+
 
 // IMAGE TAG & TITLE
 const createCard = (title, img, id) => {
