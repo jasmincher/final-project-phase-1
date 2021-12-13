@@ -5,8 +5,8 @@ dotenv.config();
 const api_key = process.env.API_KEY;
 const base_url = process.env.BASE_URL;
 
-// let id = window.location.href.slice(-6)
-let id = window.location.href.split('=')[1];
+let id = window.location.href.slice(-6)
+// let id = window.location.href.split('=')[1];
 
 
 const getDetails = async () => {
