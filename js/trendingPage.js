@@ -22,7 +22,7 @@ const createCard = (title, desc, img, id) => {
   let container = document.getElementById("trending-recipes-container");
 
   let link = document.createElement("a");
-  let url = new URL("window.location.href");
+  let url = new URL(window.location.href);
   url.searchParams.append("id", id);
   link.setAttribute("href", url);
 
