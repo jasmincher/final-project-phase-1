@@ -55,6 +55,7 @@ const createCard = (title, img, id) => {
   let url = new URL("http://localhost:1234/pages/details.html");
   url.searchParams.append("id", id);
   link.setAttribute("href", url);
+  link.setAttribute("class","search-card");
 
   let div = document.createElement("div");
 
