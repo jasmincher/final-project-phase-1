@@ -8,7 +8,16 @@
 #search-recipes-container > h3 {
   text-align: center;
   font-family: var(--body-font);
-  margin: 5% auto;
+  margin: 5% auto 10px auto;
+
+  /* margin-top: 5%; */
+}
+
+.search-divider{
+    width: 240px;
+    height: 5px;
+    margin: auto;
+    margin-bottom: 10%;
 }
 
 .search-box {
@@ -83,6 +92,7 @@
   margin-top: 10px;
 }
 
+
 @media only screen and (min-width: 576px) {
   #recipes-list {
     margin: 5% auto;
@@ -120,6 +130,7 @@
   .search-box {
     width: 50vw;
   }
+
 }
 
 @media only screen and (min-width: 1025px) {
@@ -138,6 +149,9 @@
           padding: 15px 0;
           width: 250px;
       }
+      .search-divider{
+        margin-bottom: 7%;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -161,4 +175,7 @@
   .search-box {
     width: 40vw;
   }
+  .search-divider{
+    margin-bottom: 5%;
+}
 }
