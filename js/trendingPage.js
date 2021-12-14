@@ -1,9 +1,11 @@
 import axios from "axios";
 import dotenv from "dotenv";
+import recipeImg from '../images/food-placeholder.jpeg'
 dotenv.config();
 
 const api_key = process.env.API_KEY;
 const base_url = process.env.BASE_URL;
+
 
 const getTrending = () => {
   axios
@@ -49,10 +51,11 @@ const createCard = (title, desc, img, id) => {
 const appendCards = (recipes) => {
   let container = document.getElementById("trendings-list");
   recipes.forEach((recipe) => {
+    let fallback = recipe.image ? recipe.image : recipeImg;
     let card = createCard(
       recipe.title,
       recipe.summary,
-      recipe.image,
+      fallback,
       recipe.id
     );
     container.appendChild(card);

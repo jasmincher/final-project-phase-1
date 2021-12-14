@@ -1,5 +1,7 @@
 import axios from "axios";
 import dotenv from "dotenv";
+import recipeImg from '../images/food-placeholder.jpeg'
+
 dotenv.config();
 
 const api_key = process.env.API_KEY;
@@ -62,10 +64,11 @@ const createDetailedView = (recipes) => {
     ingrList.appendChild(li);
   });
 
+  let fallback = recipes.image ? recipes.image : recipeImg;
 
   let card = recipeDetails(
     recipes.title,
-    recipes.image,
+    fallback,
     recipes.summary,
     items,
     recipes.instructions
