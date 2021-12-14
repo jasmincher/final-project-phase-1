@@ -9,10 +9,11 @@ const base_url = process.env.BASE_URL;
 
 const getTrending = () => {
   axios
-    .get(`${base_url}/random?number=10&apiKey=${api_key}`)
+    .get(`${base_url}/random?number=24&apiKey=${api_key}`)
     .then((response) => {
       const data = response.data.recipes;
       appendCards(data);
+      // console.log(data)
     })
     .catch((error) => console.error(error));
 };
