@@ -76,6 +76,7 @@
 
 #recipes-list .search-card {
   padding: 20px;
+  width: 85%;
 }
 
 #recipes-list img {
