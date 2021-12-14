@@ -13,16 +13,16 @@
   /* margin-top: 5%; */
 }
 
-.search-divider{
-    width: 240px;
-    height: 5px;
-    margin: auto;
-    margin-bottom: 10%;
+.search-divider {
+  width: 240px;
+  height: 5px;
+  margin: auto;
+  margin-bottom: 10%;
 }
 
 .search-box {
   margin: auto;
-  width: 70vw;
+  /* width: 70vw; */
   display: flex;
   box-shadow: var(--box-shadow);
   border-radius: 25px;
@@ -35,6 +35,9 @@
   border: none;
   padding: 15px 20px;
   font-family: var(--body-font);
+  font-size: 16px;
+  margin: 0;
+  width: 55vw;
 }
 
 #search-btn {
@@ -46,6 +49,8 @@
   font-size: 20px;
   border: none;
   padding: 15px 20px 15px 15px;
+  margin: 0;
+  color: black;
 }
 
 #search-btn:hover {
@@ -93,7 +98,6 @@
   margin-top: 10px;
 }
 
-
 @media only screen and (min-width: 576px) {
   #recipes-list {
     margin: 5% auto;
@@ -106,7 +110,7 @@
     width: 470px;
   }
 
-  .search-box {
+  #search-input {
     width: 60vw;
   }
 }
@@ -124,35 +128,35 @@
     width: 200px;
   }
 
-  #recipes-list .search-card{
-      padding: 10px 0;
-      width: 200px;
-  }
-  .search-box {
-    width: 50vw;
+  #recipes-list .search-card {
+    padding: 10px 0;
+    width: 200px;
   }
 
+  #search-input {
+    width: 50vw;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
-    #recipes-list {
-        margin: 5% 10%;
-        gap: 20px;
-      }
-    
-      #recipes-list img {
-        border-radius: 10px;
-        height: 250px;
-        width: 250px;
-      }
-    
-      #recipes-list .search-card{
-          padding: 15px 0;
-          width: 250px;
-      }
-      .search-divider{
-        margin-bottom: 7%;
-    }
+  #recipes-list {
+    margin: 5% 10%;
+    gap: 20px;
+  }
+
+  #recipes-list img {
+    border-radius: 10px;
+    height: 250px;
+    width: 250px;
+  }
+
+  #recipes-list .search-card {
+    padding: 15px 0;
+    width: 250px;
+  }
+  .search-divider {
+    margin-bottom: 7%;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -169,14 +173,16 @@
     height: 200px;
   }
 
-  #recipes-list .search-card{
+  #recipes-list .search-card {
     padding: 15px 0;
     width: 200px;
-}
-  .search-box {
+  }
+
+  #search-input {
     width: 40vw;
   }
-  .search-divider{
+
+  .search-divider {
     margin-bottom: 5%;
-}
+  }
 }
