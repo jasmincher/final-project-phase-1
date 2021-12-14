@@ -24,9 +24,9 @@ const createCard = (title, desc, img, id) => {
   let link = document.createElement("a");
 
   link.setAttribute("href", "details.html" + `?id=${id}`);
+  link.setAttribute("class", "trending-recipe-card");
 
   let div = document.createElement("div");
-  div.setAttribute("class", "trending-recipe-card");
 
   let recipeName = document.createElement("h6");
   recipeName.innerHTML = title;
@@ -38,16 +38,16 @@ const createCard = (title, desc, img, id) => {
   image.setAttribute("src", img);
 
   link.appendChild(div);
-  div.appendChild(recipeName);
-  div.appendChild(description);
   div.appendChild(image);
+  div.appendChild(recipeName);
+  // div.appendChild(description);
   return link;
 };
 
 //this will create a card for the # of elements there are in the array
 //each card will have its corresponding title, summary, image and id
 const appendCards = (recipes) => {
-  let container = document.getElementById("trending-recipes-container");
+  let container = document.getElementById("trendings-list");
   recipes.forEach((recipe) => {
     let card = createCard(
       recipe.title,
