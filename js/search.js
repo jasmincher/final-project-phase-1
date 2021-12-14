@@ -1,6 +1,7 @@
 import axios from "axios";
 import dotenv from "dotenv";
 import recipeImg from "../images/food-placeholder.jpeg";
+import rating from '../images/stars.png';
 dotenv.config();
 
 const api_key = process.env.API_KEY;
@@ -64,10 +65,16 @@ const createCard = (title, img, id) => {
 
   let image = document.createElement("img");
   image.setAttribute("src", img);
+  image.setAttribute("class", "recipe-image")
+
+  let stars = document.createElement("img");
+  stars.setAttribute("src",rating);
 
   link.appendChild(div);
   div.appendChild(image);
   div.appendChild(recipeName);
+  div.appendChild(stars)
+
   return link;
 };
 
