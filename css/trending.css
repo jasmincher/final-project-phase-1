@@ -1,0 +1,131 @@
+#trending-recipes-container {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#trending-recipes-container > h3 {
+  text-align: center;
+  font-family: var(--body-font);
+  margin: 5% auto 10px auto;
+}
+
+#trendings-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 10% auto;
+  justify-content: center;
+}
+
+#trendings-list a,
+#trendings-list a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+#trendings-list img {
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+  height: 250px;
+  width: 100%;
+}
+
+.trending-recipe-card{
+    padding: 20px;
+    width: 85%;
+}
+
+
+
+#trendings-list h6 {
+    font-family: var(--body-font);
+    margin: 0;
+    margin-top: 10px;
+  }
+
+.trending-divider{
+    width: 240px;
+    height: 5px;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+@media only screen and (min-width: 576px) {
+  #trendings-list {
+    margin: 5% 15%;
+    gap: 0;
+  }
+
+  #trendings-list img {
+    border-radius: 10px;
+    height: 350px;
+    width: 470px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #trendings-list {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5% auto;
+    gap: 10px;
+  }
+
+  #trendings-list img {
+    border-radius: 10px;
+    height: 200px;
+    width: 200px;
+  }
+
+  #trendings-list .trending-recipe-card {
+    padding: 10px 0;
+    width: 200px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  #trendings-list {
+    margin: 0 10%;
+    gap: 20px;
+  }
+
+  #trendings-list img {
+    border-radius: 10px;
+    height: 250px;
+    width: 250px;
+  }
+
+  #trendings-list .trending-recipe-card {
+    padding: 15px 0;
+    width: 250px;
+  }
+  .trending-divider {
+    margin-bottom: 7%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #trendings-list {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 15%;
+    gap: 15px;
+  }
+
+  #trendings-list img {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+  }
+
+  #trendings-list .trending-recipe-card {
+    padding: 15px 0;
+    width: 200px;
+  }
+
+  .trending-divider {
+    margin-bottom: 5%;
+  }
+}
