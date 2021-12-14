@@ -26,8 +26,10 @@ getDetails()
 
 
 const recipeDetails = (title, image, summary,ingredients, instructions) => {
-  const div = document.getElementById("title-and-image");
   const container = document.getElementById("details-page-container")
+  // const container = document.getElementById("list-of-details")
+
+  const div = document.getElementById("recipe-img");
   const descContainer = document.getElementById("desc-container");
   const instrContainer = document.getElementById("instr-container");
 
@@ -45,8 +47,8 @@ const recipeDetails = (title, image, summary,ingredients, instructions) => {
   instr.innerHTML = instructions;
 
 
-  div.appendChild(recipeName);
   div.appendChild(recipeImg);
+  descContainer.appendChild(recipeName);
   descContainer.appendChild(desc);
   instrContainer.appendChild(instr);
 
@@ -55,7 +57,7 @@ const recipeDetails = (title, image, summary,ingredients, instructions) => {
 };
 
 const createDetailedView = (recipes) => {
-  let list = document.getElementById("details-page-container");
+  let list = document.getElementById("details-info");
   let ingrList = document.getElementById("ingr-list");
 
   let items = recipes.extendedIngredients.forEach((ingredient) => {

@@ -1,10 +1,60 @@
-
 /*layout for details page*/
 #details-page-container {
   display: grid;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "image"
+    "desc"
+    "label"
+    "ingr"
+    "instr";
   gap: 20px;
-  padding: 20px;
+  padding: 5%;
+}
+
+/*recipe image*/
+#recipe-img img {
+  margin: auto;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  /* height: 330px; */
+  /* object-fit: cover; */
+}
+
+#recipe-img {
+  grid-area: image;
+  align-self: center;
+  /* background: pink; */
+}
+
+#desc-container h3,
+#desc-container p,
+#ingr-container h4,
+#ingr-container li,
+#instr-container p {
+  font-family: var(--body-font) !important;
+}
+
+#desc-container {
+  grid-area: desc;
+}
+
+#ingr-container {
+  grid-area: ingr;
+}
+
+#instr-container {
+  grid-area: instr;
+}
+
+#details-page-container a,
+#details-page-container a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+#details-page-container a:hover {
+  color: var(--accent-color);
 }
 
 /*close icon for close button on modal*/
@@ -13,105 +63,93 @@
   font-family: "Material Icons";
 }
 
-/*heading for recipe name*/
-#title-and-image h3 {
-  font-family: var(--body-font);
-  text-align: center;
-}
-
-/*recipe image*/
-#title-and-image img {
-  margin: auto;
-  display: block;
-  width: 330px;
-  height: 330px; 
-  object-fit: cover;
-}
-
-
 /*nutrition label button*/
 .nutrition-label-btn {
-  height: 40px;
-  margin: 40px auto;
   font-family: var(--body-font);
-
+  grid-area: label;
+  justify-self: left;
+  width: fit-content;
+  background: #cdcccc;
+  box-shadow: var(--box-shadow);
 }
 
 /*modal*/
-.mdl-dialog{
+.mdl-dialog {
   width: fit-content;
 }
 
 /*nutrition label*/
 #nutrition-label-info img {
- width: 230px;
- margin: auto;
-}
-
-h4{
-  font-family: var(--body-font) !important;
+  width: 230px;
+  margin: auto;
 }
 
 /************** Responsive Styles *************/
 @media only screen and (min-width: 576px) {
   /*recipe image*/
-  #title-and-image img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
+  #recipe-img img {
+    /* width: 350px; */
+    /* height: 350px; */
+    /* object-fit: cover; */
   }
 }
 
 @media only screen and (min-width: 768px) {
   /*recipe image*/
-  #title-and-image img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
+  #recipe-img img {
+    width: 100%;
+    /* height: 400px; */
+    /* object-fit: cover; */
   }
 }
 
 @media only screen and (min-width: 1025px) {
   /*details page layout*/
   #details-page-container {
+    /* gap: 30px; */
     grid-template-areas:
-      "title-and-image desc desc"
-      "title-and-image ingr ingr"
-      "btn instr instr";
-    grid-template-columns: 3fr 4fr;
-    gap: 0;
+      "image desc"
+      "image label"
+      "ingr ingr"
+      "instr instr";
+    padding: 5% 8%;
+    grid-template-columns: 2fr 3fr;
+
+  }
+
+  #desc-container h3{
+    margin-top: 0;
+  }
+
+  #recipe-img,
+  #desc-container{
+    align-self: center;
   }
 
   /*recipe title and recipe image container*/
-  #title-and-image {
-    grid-area: title-and-image;
-    margin: 30px;
-    margin-bottom: 0;
+  #recipe-img img {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+
   }
 
-  /*recipe description container*/
-  #desc-container {
-    grid-area: desc;
-    margin: 0 30px;
-  }
-
-  /*ingredients container*/
-  #ingr-container {
-    grid-area: ingr;
-    margin: 0 30px;
-  }
-
-  /*instructions container*/
-  #instr-container {
-    grid-area: instr;
-    margin: 0 30px;
-  }
-
-  /*nutrion label button*/
-  .nutrition-label-btn {
-    grid-area: btn;
-  }
 }
 
 @media only screen and (min-width: 1200px) {
+  #details-page-container {
+    gap: 30px;
+    grid-template-areas:
+      "image desc desc"
+      "image label ."
+      "ingr ingr ingr"
+      "instr instr instr";
+    padding: 5% 15%;
+  }
+
+  #recipe-img img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+}
 }
